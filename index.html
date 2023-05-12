@@ -45,6 +45,8 @@
               <input name="date" id="date" class="input" type="date" placeholder=" " />
              </div>
           </div>
+          <div class="input-container-full ic1">
+            <label class="input-label-radio" for="session-type">Session Type</label>
           <div class="radio-group">
             <input type="radio" id="practice" name="session-type" value="Practice">
             <label class="radio-label" for="practice">Practice</label>
@@ -53,37 +55,24 @@
             <input type="radio" id="race" name="session-type" value="Race">
             <label class="radio-label" for="race">Race</label>
           </div>
+          </div>
           
           <div class="input-container-full ic1">
             <label class="input-label"  for="best-time">BEST TIME</label>
             <input name="best-time" id="best-time" class="input" type="text" placeholder=" " />
            </div>
            
-    
+           <div class="section-container" id="section-two">
+            <div class="header-background">
+              <h1><i class="fa-solid fa-sun header-icon"></i>Weather</h1>
+            </div>
           <div class="two-element-container" id="weather-container">
-            <div class="input-container-short">
-              <h3 class="weather-label">Weather</h3>
-            </div>
-            <div class="toggle-container-short" id="weather-toggle">
-              <label class="label">
-                <div class="toggle">
-                  <input class="toggle-state" type="checkbox" name="auto-weather" id="auto-weather" value="yes" />
-                  <div class="toggle-inner">
-                    <div class="indicator"></div>
-                  </div>
-                  <div class="active-bg"></div>
-                </div>
-                <div class="label-text">Auto</div>
-              </label>
-            </div>
-          </div>
-          <div id="default-weather">
-            <div class="input-container-full ic1">
+            <div class="input-container-short ic1">
+              <div id="default-weather">
               <label class="input-label"  for="temperature">TEMPERATURE</label>
               <input name="temperature" id="temperature" type="number" class="input" placeholder=" " />
             </div>
-          </div>
-          <div class="auto-weather-reveal container" id="auto-weather-reveal" hidden="true">
+            <div class="auto-weather-reveal container" id="auto-weather-reveal" hidden="true">
               <h2 name="live-weather" id="live-weather-temp"></h2>
               <h2 name="live-weather-windspeed" id="live-weather-windspeed"></h2>
               <h2 name="live-weather-wind-direction" id="live-weather-wind-direction"></h2>
@@ -93,6 +82,22 @@
                 <input type="text" name="weather-wind-direction" id="live-weather-wind-db" hidden="true">
               </div>
           </div>
+          </div>
+            <div class="toggle-container-short" id="weather-toggle">
+              <label class="label">
+                <div class="toggle">
+                  <input class="toggle-state" type="checkbox" name="auto-weather" id="auto-weather" value="yes" />
+                  <div class="toggle-inner">
+                    <div class="indicator"></div>
+                  </div>
+                  <div class="active-bg"></div>
+                </div>
+                <div class="label-text">Realtime</div>
+              </label>
+            </div>
+          
+          
+        </div>
           <div class="input-container-full ic1">
             <label class="input-label-radio" for="conditions">CONDITIONS</label>
               <div class="checkbox-group">
@@ -106,7 +111,8 @@
                 <label for="condition-wind"><i class="fa-solid fa-wind weather-pics"></i></label>
               </div>
             </div>
-        <div class="section-container" id="section-two">
+          </div>
+        <div class="section-container" id="section-three">
           <div class="header-background">
             <h1><i class="fa-solid fa-road header-icon"></i>Track Details</h1>
           </div>
@@ -129,6 +135,8 @@
               </div>
              </div>
              <div class="ncmp-layouts container" id="ncmp-layouts" hidden="true">
+              <div class="input-container-full ic1">
+                <label class="input-label-radio" for="ncmp-layout-number">NCMP Layouts</label>
                 <select class="select-list" name="ncmp-layout-number" id="ncmp-layout-number">
                   <option value="select">-Select NCMP Layout-</option>
                   <option value="ncmp1">1 (National Layout)</option>
@@ -144,6 +152,7 @@
                 </select>
                 <br>
                 <img id="image-reveal" src=>
+              </div>
               </div>
               <div class="input-container-full ic1" id="default-layout">
                 <label class="input-label"  for="other-track-layout">Track Layout</label>
@@ -210,28 +219,28 @@
                 </div>
               <div id="individual-pressure-reveal" hidden="true">
               <div class="two-input-container">
-                <div class="input-container half-container left-cont ic1">
-                  <label for="lf-pressure">LF</label>
+                  <div class="input-container-full tp1">
+                    <label class="input-label-radio" for="lf-pressure">LF</label>
                   <input name="lf-pressure" id="lf-pressure" type="number" value="" step="0.5" min="7" class="input" placeholder=" " />
                 </div>
-                <div class="input-container half-container right-cont ic1">
-                  <label for="rf-pressure">RF</label>
+                <div class="input-container-full tp2">
+                  <label class="input-label-radio" for="rf-pressure">RF</label>
                   <input name="rf-pressure" id="rf-pressure" type="number" value="" step="0.5" min="7" class="input" placeholder=" " />
                 </div>
               </div>
               <div class="two-input-container">
-                <div class="input-container half-container left-cont ic1">
-                  <label for="lr-pressure">LR</label>
+                <div class="input-container-full tp1">
+                  <label class="input-label-radio" for="lr-pressure">LR</label>
                   <input name="lr-pressure" id="lr-pressure" type="number" value="" step="0.5" min="7" class="input" placeholder=" " />
                 </div>
-                <div class="input-container half-container right-cont ic1">
-                  <label for="rr-pressure">RR</label>
+                <div class="input-container-full tp2">
+                  <label class="input-label-radio" for="rr-pressure">RR</label>
                   <input name="rr-pressure" id="rr-pressure" type="number" value="" step="0.5" min="7" class="input" placeholder=" " />
                 </div>
               </div>
               </div>
         </div>
-        <div class="section-container" id="section-four">
+        <div class="section-container" id="section-five">
           <div class="header-background">
           <h1><i class="fa-solid fa-gears header-icon"></i>Gear</h1>
           </div>
@@ -246,10 +255,12 @@
       <div class="two-input-container">
           <h2>Gear Ratio:</h2>
           <h2 name="gear-ratio" id="gear-ratio"></h2>
-          <input type="text" name="gear-ratio-db" id="gear-ratio-db" hidden="true">
+      </div>
+      <div hidden="true">
+        <input type="text" name="gear-ratio-db" id="gear-ratio-db" hidden="true">
       </div>
         </div>
-        <div class="section-container" id="section-five">
+        <div class="section-container" id="section-six">
           <div class="header-background">
           <h1><i class="fa-solid fa-circle-up header-icon"></i>Front Setup</h1>
         </div>
@@ -261,28 +272,33 @@
         <label class="input-label"  for="camber-setting">Camber Setting</label>
         <input name="camber-setting" id="camber-setting" type="number" class="input" placeholder=" " />
       </div>
-      <div class="radio-group-label">
-        <h4>Caster Setting</h4>
+      <div class="input-container-full ic1">
+        <label class="input-label-radio" for="steering-setting">Caster Setting</label>
+        <div class="radio-group">
+          <input type="radio" name="steering-setting" id="caster-min" value="Minimum">
+          <label class="radio-label" for="caster-min">Minimum</label>
+          <input type="radio" name="steering-setting" id="caster-middle" value="Middle">
+          <label class="radio-label" for="caster-middle">Middle</label>
+          <input type="radio" name="steering-setting" id="caster-max" value="Maximum">
+          <label class="radio-label" for="caster-max">Maximum</label>
+        </div>
       </div>
+      <div class="input-container-full ic1">
+        <label class="input-label-radio" for="steering-hole">Steering Column Hole</label>
       <div class="radio-group">
-        <input type="radio" name="steering-setting" id="caster-max" value="Maximum">
-        <label class="radio-label" for="caster-max">Maximum</label>
-        <input type="radio" name="steering-setting" id="caster-middle" value="Middle">
-        <label class="radio-label" for="caster-middle">Middle</label>
-        <input type="radio" name="steering-setting" id="caster-min" value="Minimum">
-        <label class="radio-label" for="caster-min">Minimum</label>
+        <input type="radio" name="steering-hole" id="steering-low" value="Bottom">
+        <label class="radio-label" for="steering-low">Bottom</label>
+        <input type="radio" name="steering-hole" id="steering-mid" value="Middle">
+        <label class="radio-label" for="steering-mid">Middle</label>
+        <input type="radio" name="steering-hole" id="steering-top" value="Top">
+        <label class="radio-label" for="steering-top">Top</label>
       </div>
-      <div class="radio-group-label">
-        <h4>Steering Column Hole</h4>
       </div>
-      <div class="radio-group">
-        <input type="radio" name="steering-hole" id="steering-top" value="Top"><label class="radio-label" for="steering-top">Top</label><input type="radio" name="steering-hole" id="steering-mid" value="Middle"><label class="radio-label" for="steering-mid">Middle</label><input type="radio" name="steering-hole" id="steering-low" value="Bottom"><label class="radio-label" for="steering-low">Bottom</label>
-      </div>
-      <div class="radio-group-label">
-        <h4>Spindle Hole</h4>
-      </div>
+      <div class="input-container-full ic1">
+        <label class="input-label-radio" for="spindle-hole">Spindle Hole</label>
       <div class="radio-group">
         <input type="radio" name="spindle-hole" id="spindle-inside" value="Inside"><label class="radio-label" for="spindle-inside">Inside</label><input type="radio" name="spindle-hole" id="spindle-outside" value="Outside"><label class="radio-label" for="spindle-outside">Outside</label>
+      </div>
       </div>
         <label class="input-label"  for="front-bar">Front Torsion Bar</label>
         <input name="front-bar" id="front-bar" class="input" type="text" list="front-bar-list" placeholder=" " />
@@ -297,7 +313,7 @@
           <option value="OTK Gold">OTK Gold (Hard)</option>
         </datalist>
         </div>
-        <div class="section-container" id="section-six">
+        <div class="section-container" id="section-seven">
           <div class="header-background">
           <h1><i class="fa-solid fa-circle-down header-icon"></i>Rear Setup</h1>
           </div>
@@ -313,42 +329,51 @@
             <label class="input-label"  for="rear-hub">Rear Hub Used</label>
             <input name="rear-hub" id="rear-hub" type="text" class="input" placeholder=" " />
           </div>
-          <div class="radio-group-label">
-            <h4>Rear Ride Height</h4>
-          </div>
+          <div class="input-container-full ic1">
+            <label class="input-label-radio" for="rear-ride-height">Rear Ride Height</label>
           <div class="radio-group">
-            <input type="radio" name="rear-ride-height" id="rear-high" value="High"><label class="radio-label" for="rear-high">High</label>
-            <input type="radio" name="rear-ride-height" id="rear-mid" value="Middle"><label class="radio-label" for="rear-mid">Middle</label>
             <input type="radio" name="rear-ride-height" id="rear-low" value="Low"><label class="radio-label" for="rear-low">Low</label>
+            <input type="radio" name="rear-ride-height" id="rear-mid" value="Middle"><label class="radio-label" for="rear-mid">Middle</label>
+            <input type="radio" name="rear-ride-height" id="rear-high" value="High"><label class="radio-label" for="rear-high">High</label>
           </div>
-          <div class="radio-group-label">
-            <h4>Wheelbase Setting</h4>
           </div>
-          <div class="radio-group">
-            <input type="radio" name="wheelbase" id="wheelbase-none" value="N/A"><label class="radio-label" for="wheelbase-none">N/A</label>
-            <input type="radio" name="wheelbase" id="wheelbase-short" value="Short"><label class="radio-label" for="wheelbase-short">Short</label>
-            <input type="radio" name="wheelbase" id="wheelbase-mid" value="Middle"><label class="radio-label" for="wheelbase-mid">Middle</label>
-            <input type="radio" name="wheelbase" id="wheelbase-long" value="Long"><label class="radio-label" for="wheelbase-long">Long</label>
+          <div class="input-container-full ic1">
+            <label class="input-label-radio" for="wheelbase">Wheelbase Setting</label>
+            <div class="radio-group">
+              <input type="radio" name="wheelbase" id="wheelbase-none" value="N/A"><label class="radio-label" for="wheelbase-none">N/A</label>
+              <input type="radio" name="wheelbase" id="wheelbase-short" value="Short"><label class="radio-label" for="wheelbase-short">Short</label>
+              <input type="radio" name="wheelbase" id="wheelbase-mid" value="Middle"><label class="radio-label" for="wheelbase-mid">Middle</label>
+              <input type="radio" name="wheelbase" id="wheelbase-long" value="Long"><label class="radio-label" for="wheelbase-long">Long</label>
+            </div>
           </div>
-          <div class="radio-group-label">
-            <h4>Seat Struts</h4>
-          </div>
+          <div class="input-container-full ic1">
+            <label class="input-label-radio" for="seat-struts">Seat Struts</label>
           <div class="radio-group">
             <input type="radio" name="seat-struts" id="seat-struts-yes" value="Yes"><label class="radio-label" for="seat-struts-yes">Yes</label>
             <input type="radio" name="seat-struts" id="seat-struts-no" value="No"><label class="radio-label" for="seat-struts-no">No</label>
           </div>
         </div>
-        <div class="section-container" id="section-seven">
+        <div class="section-container" id="section-eight">
           <div class="header-background">
           <h1><i class="fa-solid fa-clipboard-list header-icon"></i>Feedback</h1>
           </div>
-          <div class="radio-group-label">
-          <h4>How Was It?</h4>
-          </div>
+          <div class="input-container-full ic1">
+            <label class="input-label-radio" for="simple-feedback">How Was It?</label>
           <div class="radio-group">
-            <input type="radio" name="simple-feedback" id="simple-feedback-thumbs-up" value="Thumbs Up"><label class="radio-label" for="simple-feedback-thumbs-up"><i class="fa-solid fa-thumbs-down fa-rotate-180"></i></label>
-            <input type="radio" name="simple-feedback" id="simple-feedback-thumbs-down" value="Thumbs Down"><label class="radio-label" for="simple-feedback-thumbs-down"><i class="fa-solid fa-thumbs-down"></i></label>
+            <input type="radio" name="simple-feedback" id="simple-feedback-thumbs-up" value="Thumbs Up">
+              <label class="radio-label" for="simple-feedback-thumbs-up">
+                <i class="fa-solid fa-thumbs-down fa-rotate-180"></i>
+                <!-- <i class="fa-solid fa-rocket"></i> -->
+              </label>
+            <input type="radio" name="simple-feedback" id="simple-feedback-thumbs-down" value="Thumbs Down">
+              <label class="radio-label" for="simple-feedback-thumbs-down">
+                <i class="fa-solid fa-thumbs-down"></i>
+                <!-- <i class="fa-solid fa-trash"></i> -->
+              </label>
           </div>
+          </div>
+          <div class="input-container-full ic1">
+            <label class="input-label-radio" for="notes">Notes</label>
           <div class="notes-container ic1">
             <textarea class="notes" name="notes" id="notes" placeholder="Enter your feedback / notes here" rows="10" cols="33"></textarea>
           </div>
