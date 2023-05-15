@@ -72,15 +72,8 @@
               <label class="input-label"  for="temperature">TEMPERATURE</label>
               <input name="temperature" id="temperature" type="number" class="input" placeholder=" " />
             </div>
-            <div class="auto-weather-reveal container" id="auto-weather-reveal" hidden="true">
-              <h2 name="live-weather" id="live-weather-temp"></h2>
-              <h2 name="live-weather-windspeed" id="live-weather-windspeed"></h2>
-              <h2 name="live-weather-wind-direction" id="live-weather-wind-direction"></h2>
-              <div class="hidden-weather-db" hidden="true">
-                <input type="text" name="weather-temperature" id="live-weather-temp-db" hidden="true">
-                <input type="text" name="weather-windspeed" id="live-weather-windspeed-db" hidden="true">
-                <input type="text" name="weather-wind-direction" id="live-weather-wind-db" hidden="true">
-              </div>
+            <div class="auto-weather-reveal container" id="auto-weather-reveal-header" hidden="true">
+              <h4 name="live-weather-header"> Weather For Your Location:</h4>
           </div>
           </div>
             <div class="toggle-container-short" id="weather-toggle">
@@ -95,9 +88,19 @@
                 <div class="label-text">Realtime</div>
               </label>
             </div>
-          
-          
         </div>
+
+
+        <div class="auto-weather-reveal container" id="auto-weather-reveal" hidden="true">
+          <h2 name="live-weather" id="live-weather-temp"></h2>
+          <h2 name="live-weather-windspeed" id="live-weather-windspeed"></h2>
+          <h2 name="live-weather-wind-direction" id="live-weather-wind-direction"></h2>
+          <div class="hidden-weather-db" hidden="true">
+            <input type="text" name="weather-temperature" id="live-weather-temp-db" hidden="true">
+            <input type="text" name="weather-windspeed" id="live-weather-windspeed-db" hidden="true">
+            <input type="text" name="weather-wind-direction" id="live-weather-wind-db" hidden="true">
+          </div>
+      </div>
           <div class="input-container-full ic1">
             <label class="input-label-radio" for="conditions">CONDITIONS</label>
               <div class="checkbox-group">
@@ -138,7 +141,6 @@
               <div class="input-container-full ic1">
                 <label class="input-label-radio" for="ncmp-layout-number">NCMP Layouts</label>
                 <select class="select-list" name="ncmp-layout-number" id="ncmp-layout-number">
-                  <option value="select">-Select NCMP Layout-</option>
                   <option value="ncmp1">1 (National Layout)</option>
                   <option value="ncmp2">2 (Fast Track)</option>
                   <option value="ncmp3">3</option>
@@ -155,8 +157,14 @@
               </div>
               </div>
               <div class="input-container-full ic1" id="default-layout">
+              <!-- <div class="input-container-full ic1" > -->
                 <label class="input-label"  for="other-track-layout">Track Layout</label>
                 <input name="other-track-layout" id="other-track-layout" type="text" class="input" placeholder=" " />
+              <!-- </div> -->
+              <!-- <div class="input-container-full ic1">
+                <label class="upload-label"  for="file-track-layout">Upload Track Layout</label>
+                <input name="file-track-layout" id="file-track-layout" type="file" accept="image/*, .pdf" class="input" placeholder=" " />
+              </div> -->
               </div>
         </div>
         <div class="section-container" id="section-three">
@@ -198,26 +206,22 @@
             <div class="two-element-container">
               <div class="input-container-short ic1" id="same-pressure-input-reveal">
                 <label class="input-label"  for="same-tire-pressure" id="tire-pressure-label">Tire Pressure</label>
-                <input name="same-tire-pressure" id="same-tire-pressure" type="number" value="" class="input" placeholder=" " />
+                <input name="same-tire-pressure" id="same-tire-pressure" type="number" value="" class="input" placeholder=" " disabled="true" />
               </div>
               <div class="toggle-container-short pressure-toggle">
                 <label class="label">
                   <div class="toggle">
-                    <input class="toggle-state" type="checkbox" name="individual-pressure-toggle" id="individual-pressure-toggle" value="check" />
+                    <input class="toggle-state" type="checkbox" name="same-pressure-toggle" id="same-pressure-toggle" value="check" />
                       <div class="toggle-inner">
                         <div class="indicator"></div>
                       </div>
                       <div class="active-bg"></div>
                   </div>
-                  <div class="label-text">Indiv</div>
+                  <div class="label-text">Same</div>
                 </label>
               </div>
             </div>
-                <div class="tire-pressure-all-cont container" id="same-pressure-reveal" hidden="true">
-                  <label class="input-label"  for="all-tire-pressure">All Tires:</label>
-                  <input name="all-tire-pressure" id="all-tire-pressure" type="number" step="0.5" min="7" placeholder="Enter PSI">
-                </div>
-              <div id="individual-pressure-reveal" hidden="true">
+              <div id="individual-pressure-reveal">
               <div class="two-input-container">
                   <div class="input-container-full tp1">
                     <label class="input-label-radio" for="lf-pressure">LF</label>
