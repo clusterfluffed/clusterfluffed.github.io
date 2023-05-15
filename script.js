@@ -47,16 +47,28 @@ document.querySelector('#ncmp-layouts').addEventListener("change", () => {
     });
 
 // V2 of Tire Pressure based on toggle
-document.querySelector('#individual-pressure-toggle').addEventListener("click", () => {
+document.querySelector('#same-pressure-toggle').addEventListener("click", () => {
 
-    if(document.getElementById('individual-pressure-toggle').checked===true) {
-        document.getElementById('individual-pressure-reveal').hidden = false;
-        document.getElementById('same-tire-pressure').disabled = true;
-    } else {
+    if(document.getElementById('same-pressure-toggle').checked===true) {
         document.getElementById('individual-pressure-reveal').hidden = true;
         document.getElementById('same-tire-pressure').disabled = false;
+    } else {
+        document.getElementById('individual-pressure-reveal').hidden = false;
+        document.getElementById('same-tire-pressure').disabled = true;
     }
 });
+
+// Old version to reveal individual. Changed to reveal same for better UI
+// document.querySelector('#individual-pressure-toggle').addEventListener("click", () => {
+
+//     if(document.getElementById('individual-pressure-toggle').checked===true) {
+//         document.getElementById('individual-pressure-reveal').hidden = false;
+//         document.getElementById('same-tire-pressure').disabled = true;
+//     } else {
+//         document.getElementById('individual-pressure-reveal').hidden = true;
+//         document.getElementById('same-tire-pressure').disabled = false;
+//     }
+// });
 
 // const driveSprocket = document.querySelector('#driver-sprocket');
 const rearSprocket = document.querySelector('#rear-sprocket');
@@ -84,17 +96,6 @@ document.querySelector('#rear-sprocket').addEventListener("change", () => {
 })
 
 
-
-// Change the input border to blue when the input value is not empty
-// const inputBorder = document.querySelector('.input-border');
-// const inputBorderSelector = document.getElementsByClassName('input-border');
-
-// document.getElementsByClassName('input-border').addEventListener("change", () => {
-//     if (inputBorderSelector.value != "") {
-//         inputBorderSelector.setAttribute('class', 'input-border blue-border');
-//     }  
-// });
-
 // form submit to Google Sheets
 // const scriptURL = 'https://script.google.com/macros/s/AKfycbwzDabdzOSsANLmudRpiaQH4C8bBGzKGNmdPb6claXvAdSroK-1ZjQARxNNsiYD8Dxd/exec'
 // const form = document.forms['submit-to-google-sheet']
@@ -110,7 +111,7 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbwzDabdzOSsANLmudRpia
 const form = document.forms['submit-to-google-sheet']
 
 form.addEventListener('submit', e => {
-  e.preventDefault()
+e.preventDefault()
   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
     .then(response => alert('Your data has been submitted!', response))
     .catch(error => alert('Sorry, an error has occured!', error.message))
@@ -134,6 +135,7 @@ document.querySelector('#auto-weather').addEventListener("click", () => {
 
     if(document.getElementById('auto-weather').checked===true) {
         document.getElementById('auto-weather-reveal').hidden = false;
+        document.getElementById('auto-weather-reveal-header').hidden = false;
         document.getElementById('default-weather').hidden = true;
         (function () {
             navigator.geolocation.getCurrentPosition(function (position) {
@@ -216,6 +218,9 @@ document.querySelector('#auto-weather').addEventListener("click", () => {
     }
     if(document.getElementById('auto-weather').checked===false) {
         document.getElementById('auto-weather-reveal').hidden = true;
+        document.getElementById('auto-weather-reveal-header').hidden = true;
         document.getElementById('default-weather').hidden = false;
     }
 });
+
+
