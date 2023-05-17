@@ -1,0 +1,98 @@
+<!DOCTYPE html> 
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+    </style>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,400;0,600;0,900;1,400;1,600;1,900&display=swap');
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <title>Kart Track</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="/profile.html">Profile</a>
+      <a href="/setup.html">Setup</a>
+      <a href="/history.html">History</a>
+      <a href="/tools.html" class="active">Tools</a>
+    </div>
+    <div class="main-wrapper">
+    <div class="form-container" id="form-container">
+      <div class="img-container">
+        <img class="logo" src="https://i.ibb.co/Pr2sphb/Kart-Track-Logo.png" alt="Kart-Track-Logo" border="0" /></a>
+      </div>
+      <div class="section-container" id="section-one">
+        <div class="header-background" id="accordion-gear">
+          <h1><i class="fa-solid fa-hammer header-icon"></i>TOOLS</h1>
+        </div>
+
+        <details class="style4">
+          <summary>Gear Ratio Calculator</summary>
+          <div class="content">
+            <div class="input-container-full ic1">
+              <label class="input-label"  for="drive-sprocket">Clutch Drive Sprocket</label>
+              <input name="drive-sprocket" id="drive-sprocket" type="number" class="input" placeholder=" " />
+            </div>
+            <div class="input-container-full ic1">
+              <label class="input-label"  for="rear-sprocket">Rear Sprocket</label>
+              <input name="rear-sprocket" id="rear-sprocket" type="number" class="input" placeholder=" " />
+            </div>
+            <div class="two-input-container">
+                <h2>Gear Ratio:</h2>
+                <h2 name="gear-ratio" id="gear-ratio"></h2>
+            </div>
+            </div>
+        </details>
+
+        <details class="style4">
+          <summary>Setup Tips</summary>
+          <div class="content">
+                <h3>Lack front grip on turn in?</h3>
+                  <h4>Here's a possible solution</h4>
+                  <h4>Here's another possible solution</h4>
+                  <h4>and another</h4>
+            </div>
+        </details>
+
+        <details class="style4" id="auto-weather">
+          <summary>Current Weather</summary>
+          <div class="content">
+            <div class="auto-weather-reveal container" id="auto-weather-reveal-header">
+              <h4 name="live-weather-header"> Weather For Your Location:</h4>
+            </div>
+  
+            <div class="auto-weather-reveal container" id="auto-weather-reveal">
+              <h2 name="live-weather" id="live-weather-temp"></h2>
+              <h2 name="live-weather-windspeed" id="live-weather-windspeed"></h2>
+              <h2 name="live-weather-wind-direction" id="live-weather-wind-direction"></h2>
+              <div class="hidden-weather-db" hidden="true">
+                <input type="text" name="weather-temperature" id="live-weather-temp-db" hidden="true">
+                <input type="text" name="weather-windspeed" id="live-weather-windspeed-db" hidden="true">
+                <input type="text" name="weather-wind-direction" id="live-weather-wind-db" hidden="true">
+              </div>
+            </div>
+          </div>
+        </details>
+        
+        </div>
+    </div>  
+  </div>
+    
+    <script src="https://kit.fontawesome.com/a8027ef181.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="tools-script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNBmAlN847-ZUXvvG5PU55SEV3foa01n4&libraries=places"></script>
+  </body>
+</html>
