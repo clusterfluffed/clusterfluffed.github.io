@@ -711,3 +711,17 @@ details[open] summary::before {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
+
+.sub-accordion {
+  font-size: 12px;
+}
+
+.sub-accordion-header {
+  text-align: center;
+  margin-bottom: -10px;
+}
+
+.sub-accordion-list > li {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
