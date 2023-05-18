@@ -347,6 +347,10 @@ label + input[type=radio] + label {
   font-size: 18px;
 }
 
+.checkbox-width {
+  width: 25%;
+}
+
 input[type=checkbox] {
   position: absolute;
   visibility: hidden;
